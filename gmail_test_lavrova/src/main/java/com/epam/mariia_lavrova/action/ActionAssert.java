@@ -1,4 +1,4 @@
-package com.epam.mariia_lavrova.helper;
+package com.epam.mariia_lavrova.action;
 
 import junit.framework.Assert;
 import org.openqa.selenium.WebElement;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 import static com.epam.mariia_lavrova.constant.Message.*;
-import static com.epam.mariia_lavrova.helper.ActionHelper.*;
+import static com.epam.mariia_lavrova.action.ActionHelper.*;
 
 public class ActionAssert {
 

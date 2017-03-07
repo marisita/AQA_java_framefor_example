@@ -1,4 +1,4 @@
-package com.epam.mariia_lavrova.helper;
+package com.epam.mariia_lavrova.action;
 
 import com.epam.mariia_lavrova.driver.ChromeDriverManager;
 import org.apache.logging.log4j.LogManager;
@@ -16,6 +16,7 @@ import static com.epam.mariia_lavrova.constant.Message.*;
 public class ActionHelper {
 
     private static Logger logger = LogManager.getLogger(ActionHelper.class);
+
     private static WebDriverWait wait = new WebDriverWait(ChromeDriverManager.getDriver(), 3);
 
     public static boolean isContains(String actualText, String expectedText) {

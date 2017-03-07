@@ -1,6 +1,6 @@
 package com.epam.mariia_lavrova.page;
 
-import com.epam.mariia_lavrova.helper.Action;
+import com.epam.mariia_lavrova.action.Action;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

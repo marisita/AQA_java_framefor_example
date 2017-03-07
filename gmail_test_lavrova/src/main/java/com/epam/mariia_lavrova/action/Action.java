@@ -1,4 +1,4 @@
-package com.epam.mariia_lavrova.helper;
+package com.epam.mariia_lavrova.action;
 
 import com.epam.mariia_lavrova.driver.ChromeDriverManager;
 import org.apache.logging.log4j.LogManager;
@@ -69,14 +69,19 @@ public class Action {
      */
     public static void refreshPage(String pageName) {
         ChromeDriverManager.getDriver().navigate().refresh();
+        acceptAlert(pageName);
+        logger.info(String.format(PAGE_WAS_REFRESHED, pageName));
+    }
+
+    private static void acceptAlert(String pageName) {
         try {
-            WebDriverWait wait = new WebDriverWait(ChromeDriverManager.getDriver(), 2);
+            WebDriverWait wait = new WebDriverWait(ChromeDriverManager.getDriver(), 3);
             wait.until(ExpectedConditions.alertIsPresent());
             Alert alert = ChromeDriverManager.getDriver().switchTo().alert();
             alert.accept();
-            logger.info(String.format(PAGE_WAS_REFRESHED, pageName));
+            logger.info(String.format(ALERT_WAS_ACCEPTED, pageName));
         } catch (TimeoutException e) {
-            logger.error(String.format(PAGE_WAS_NOT_REFRESHED, pageName));
+            logger.error(String.format(ALERT_WAS_NOT_ACCEPTED, pageName));
         }
     }
 }

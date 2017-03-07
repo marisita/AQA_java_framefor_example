@@ -8,6 +8,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import static com.epam.mariia_lavrova.constant.DriverName.*;
 import static com.epam.mariia_lavrova.constant.Message.INVALID_DRIVER_NAME;
 
+/**
+ * Class for create webDriver instance
+ *
+ * @author Mariia_Lavrova
+ * @since 02/02/2017
+ */
+
 public class DriverFactory {
 
     /**
@@ -23,5 +30,8 @@ public class DriverFactory {
             case IE: return new InternetExplorerDriver();
             default: throw new IllegalArgumentException(INVALID_DRIVER_NAME);
         }
+    }
+
+    private DriverFactory() {
     }
 }

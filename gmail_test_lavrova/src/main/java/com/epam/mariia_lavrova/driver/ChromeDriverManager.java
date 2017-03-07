@@ -19,9 +19,6 @@ public class ChromeDriverManager {
 
     private static WebDriver webDriver;
 
-    private ChromeDriverManager() {
-    }
-
     /**
      * Creates the Chrome Driver instance if it is not exist yet and returns it or just return existing instance
      * @return Chrome Driver instance
@@ -53,5 +50,8 @@ public class ChromeDriverManager {
         timeouts.pageLoadTimeout(PAGE_LOAD_TIME_OUT, TimeUnit.SECONDS);
         timeouts.setScriptTimeout(SET_SCRIPT_TIME_OUT, TimeUnit.SECONDS);
         timeouts.implicitlyWait(IMPLICITLY_WAIT, TimeUnit.SECONDS);
+    }
+
+    private ChromeDriverManager() {
     }
 }

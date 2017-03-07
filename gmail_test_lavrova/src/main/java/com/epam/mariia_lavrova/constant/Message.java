@@ -12,7 +12,9 @@ public final class Message {
     public static final String INVALID_DRIVER_NAME = "Invalid driver name";
 
     public static final String PAGE_WAS_REFRESHED = "Page %s was refreshed";
-    public static final String PAGE_WAS_NOT_REFRESHED = "Page %s was not refreshed";
+
+    public static final String ALERT_WAS_ACCEPTED = "Alert on page %s was accepted";
+    public static final String ALERT_WAS_NOT_ACCEPTED = "Alert on page %s was not accepted";
 
     public static final String ELEMENT_CONTAINS_TEXT = "Element %s contains text '%s' on the page";
     public static final String ELEMENT_NOT_CONTAIN_TEXT = "Element %s does not contain test '%s'";
